@@ -108,7 +108,8 @@
     $(window).scroll(function(){
         var scrollbarLocation = $(this).scrollTop();
         scrolllink.each(function(){
-            var sectionOffset = $(this.hash).offset().top - 140
+          // alert(JSON.stringify($(this.hash).offset().top));
+            var sectionOffset = $(this.hash).offset()?.top - 140;
             if (sectionOffset <= scrollbarLocation){
                 $(this).parent().addClass('active');
                 $(this).parent().siblings().removeClass('active');
@@ -139,15 +140,15 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result in the element with id="demo"
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("hours").innerHTML = hours;
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innerHTML = seconds;
+        // document.getElementById("days").innerHTML = days;
+        // document.getElementById("hours").innerHTML = hours;
+        // document.getElementById("minutes").innerHTML = minutes;
+        // document.getElementById("seconds").innerHTML = seconds;
 
         // If the count down is finished, write some text
         if (distance < 0) {
           clearInterval(x);
-          document.getElementById("counter").innerHTML = "EXPIRED";
+          // document.getElementById("counter").innerHTML = "EXPIRED";
         }
       }, 1000);
 

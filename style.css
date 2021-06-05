@@ -65,8 +65,8 @@ body{
 	font-size: 14px;
 	color: #cbe5ff;
   overflow-x: hidden;
-
 }
+html {overflow-x: hidden;}
 
 h1,
 h2,
